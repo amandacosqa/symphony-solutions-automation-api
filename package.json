@@ -4,7 +4,8 @@
   "description": "API Testing Automation in Javascript frameworks",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test --reporter mochawesome",
+    "test:spec": "npx mocha --spec test/test.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,6 @@
   },
   "homepage": "https://github.com/amandacosqa/symphony-solutions-automation-api#readme",
   "dependencies": {
-    "chai": "^4.3.10",
     "mocha": "^10.2.0",
     "mochawesome": "^7.1.3",
     "supertest": "^6.3.3"

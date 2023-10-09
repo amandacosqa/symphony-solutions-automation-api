@@ -1,19 +1,21 @@
-var expect = require('chai').expect;
 const request = require('supertest');
-// const { schema } = require('../../schemas/posts.js');
-// const baseUrl = require('../../helper/baseUrl');
+let i, result = 0;
 
 describe('API testing', function () {
     it('Get entries', function () {
-        request('https://api.publicapis.org/entries')
-        .get('/')
-        .end(function(res) {
-            // expect(res.status).to.be.equal(204);
-            expect(res.body.count).to.be.equal(147)
-        });
-        // .expect(203)
-        // .expect((res) => {
-        //     assert.ok(res.body.count(147));
-        // })
-    })
-  })
+        request('https://api.publicapis.org')
+        .get('/entries')
+        .expect(200)
+        .end(function(err, res) {
+            if (err) throw err;
+            for(i=0; i <= res.body.count; i++) {
+                if (res.body.entries[i]?.Category == 'Authentication & Authorization') {
+                    result = result + 1;
+                    console.log(res.body.entries[i])
+                } else if (res.body.count == i) {
+                    console.log('There are ' + result + ' positions with property Category: Authentication & Authorization in this body response\n')   
+                }
+            }
+        })
+    });
+})
