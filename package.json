@@ -1,0 +1,30 @@
+{
+  "name": "symphony-solutions-automation-api",
+  "version": "1.0.0",
+  "description": "API Testing Automation in Javascript frameworks",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test --reporter mochawesome",
+    "test:spec": "npx mocha --spec test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amandacosqa/symphony-solutions-automation-api.git"
+  },
+  "keywords": [
+    "api",
+    "testing",
+    "automation"
+  ],
+  "author": "Amanda Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amandacosqa/symphony-solutions-automation-api/issues"
+  },
+  "homepage": "https://github.com/amandacosqa/symphony-solutions-automation-api#readme",
+  "dependencies": {
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "supertest": "^6.3.3"
+  }
+}
