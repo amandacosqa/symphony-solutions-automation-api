@@ -16,8 +16,6 @@ Create (design and implement) an automated API test using any JS framework or li
 
 #### 1. Clone repository in your local environment 
 
-# Symphony Solutions challenge with API 
-
 The repository was created to publish the code developed from a challenge proposed in Symphony Solutions' recruitment process. 
 
 ## Briefing
@@ -32,9 +30,6 @@ Create (design and implement) an automated API test using any JS framework or li
 ## How to run tests 
 
 #### 1. Clone repository in your local environment 
-
-
-# Symphony Solutions challenge with API 
 
 The repository was created to publish the code developed from a challenge proposed in Symphony Solutions' recruitment process. 
 
