@@ -1,9 +1,10 @@
 const request = require('supertest');
+const baseUrl = require('../test/helpers/fixture.json').baseUrl;
 let i, result = 0;
 
-describe('API testing', function () {
-    it('Get entries', function () {
-        request('https://api.publicapis.org')
+describe('GET entries', function () {
+    it('Given that a payload and status 200 are returned, the objects with the Category property and total number of objects found will be printed on the screen', function () {
+        request(baseUrl)
         .get('/entries')
         .expect(200)
         .end(function(err, res) {
